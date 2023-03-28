@@ -1,3 +1,12 @@
+def read_csv(file):
+    from pprint import pprint
+    with open(file) as csvfile:
+        reader = csv.DictReader(csvfile)
+    
+        for row in reader:
+            pprint(row)         
+read_csv("sample.csv")
+
 class Cupcake:
     def __init__ (self, name, price, flavor, frosting, filling):
         self.name = name
