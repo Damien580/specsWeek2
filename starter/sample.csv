@@ -1,6 +1,7 @@
 size,name,price,flavor,frosting,sprinkles,filling
-regular,Stars and Stripes,2.99,Vanilla,Vanilla,"['Red', 'White', 'Blue', 'Chocolate']",Chocolate
-mini,Oreo,0.99,Chocolate,Cookies and Cream,['Oreo pieces'],
-large,Red Velvet,3.99,Red Velvet,Cream Cheese,[],
-regular,Triple Chocolate,2.99,Chocolate,Chocolate,[],Chocolate
-regular,Strawberry,2.99,Stawberry,Vanilla,[],
+Regular,Stars and Stripes,2.99,Vanilla,Chocolate,"['Red', 'White', 'Blue']",
+Mini,Oreo,0.99,Chocolate,Cookies and Cream,['Oreo pieces'],
+Large,Red Velvet,3.99,Red Velvet,Cream Cheese,['White'],
+Large,Strawberries and Creme,3.99,Vanilla,Strawberry,"['Red', 'White']",Strawberry
+Mini,Peanut Butter Fudge,1.99,Chocolate,Peanut Butter,[],
+Regular,Orange Creme,2.99,Vanilla,Orange,[],Orange
