@@ -9,7 +9,7 @@ def read_csv(file):
         
         for row in reader:
             pprint(row)
-read_csv("sample.csv")
+# read_csv("sample.csv")
 
 
 class Cupcake():

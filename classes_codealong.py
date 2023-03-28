@@ -30,3 +30,5 @@ batman = Superhero("Batman", "Bruce Wayne", 100, 25, "No Parents")
 print(superman)
 print(batman)
 
+print(Superhero.punch(batman, superman))
+print(Superhero.punch(superman, batman))
