@@ -42,6 +42,4 @@ import send2trash
 #     print("\n")
     
 # print(os.walk('/Users/damienredd/DevMountain/Python 35/week 2/py-proj-2/starter'))
-
-
-
+    
