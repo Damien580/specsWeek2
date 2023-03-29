@@ -13,11 +13,11 @@ def info():
 
 @app.route('/puppy/<name>')    #127.0.0.1/puppy/<enter a name here> will display the page for that puppy name.
 def puppy(name):
-    return "<h1>100th letter: {}</h1>".format(name[100])
+    return "<h1>4th letter: {}</h1>".format(name[4])
 
 
 
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True) #turns on debug function...showing error script on browser to help track down bug. Also can use built in terminal and pin number to check variables and functions to track down bugs.
