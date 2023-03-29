@@ -13,7 +13,7 @@ def info():
 
 @app.route('/puppy/<name>')
 def puppy(name):
-    return "<h1>This is a page for {}</h1>".format(name)
+    return "<h1>Uppercase: {}</h1>".format(name.upper()) #127.0.0.1/puppy/<enter a name here> will display the page for that puppy name.
 
 
 
