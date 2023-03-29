@@ -11,13 +11,13 @@ def index():
 def info():
     return "<h1>Puppies are cute!</h1>"
 
-@app.route('/puppy/<name>')
+@app.route('/puppy/<name>')    #127.0.0.1/puppy/<enter a name here> will display the page for that puppy name.
 def puppy(name):
-    return "<h1>Uppercase: {}</h1>".format(name.upper()) #127.0.0.1/puppy/<enter a name here> will display the page for that puppy name.
+    return "<h1>100th letter: {}</h1>".format(name[100])
 
 
 
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
