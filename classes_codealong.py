@@ -15,14 +15,15 @@ class Superhero:
         return len(self.name)
             
     def punch(self, enemy):
+        print("{} has punched {}".format(self.name, enemy.name))
         enemy.health -= self.power
         enemy.check_if_dead()
         
     def check_if_dead(self):
         if self.health <= 0:
-            print("RIP")
+            print("RIP {}".format(self.name))
         else:
-            print("ALIVE!")
+            print("{} is ALIVE!".format(self.name))
 
 superman = Superhero("Superman", "Clark Kent", 1000, 100, "Kryptonite")
 batman = Superhero("Batman", "Bruce Wayne", 100, 25, "No Parents")
@@ -30,5 +31,5 @@ batman = Superhero("Batman", "Bruce Wayne", 100, 25, "No Parents")
 print(superman)
 print(batman)
 
-print(Superhero.punch(batman, superman))
-print(Superhero.punch(superman, batman))
+Superhero.punch(batman, superman)
+Superhero.punch(superman, batman)
