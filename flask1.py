@@ -13,7 +13,7 @@ def info():
 
 @app.route('/puppy/<name>')    #127.0.0.1/puppy/<enter a name here> will display the page for that puppy name.
 def puppy(name):
-    return "<h1>4th letter: {}</h1>".format(name[4])
+    return "<h1>4th letter: {}</h1>".format(name[4]) #will display the letter at the 4th index, or throw an error for debug if no 4th index.
 
 
 
