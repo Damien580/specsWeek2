@@ -1,6 +1,6 @@
 import csv
 from flask import Flask, render_template, url_for, redirect
-from cupcakes import get_cupcakes, find_cupcake, add_cupcake_dictionary
+from cupcakes import get_cupcakes, find_cupcake, add_cupcake_dictionary, del_cupcake_dictionary
 
 app = Flask(__name__)
 
@@ -10,12 +10,10 @@ app = Flask(__name__)
 def home():
     cupcakes = get_cupcakes("sample.csv")
     order = get_cupcakes("order.csv")
-    order_total = round(sum([float(x["price"]) for x in order])),
+    order_total = round(sum([float(x["price"]) for x in order]), 2)
     return render_template("index.html", cupcakes=cupcakes, items_num=len(order), order_total=order_total)
 
-@app.route("/all")
-def all():
-    return render_template("all.html")
+
 
 @app.route("/add/<name>")
 def add(name):
@@ -49,7 +47,13 @@ def cart():
         
     return render_template("cart.html", cupcakes=cupcake_set)
     
-
+@app.route("/delete/<name>")
+def delete(name):
+   
+    del_cupcake_dictionary("order.csv", name)
+    return redirect(url_for("cart"))
+    
+        
 
 
 

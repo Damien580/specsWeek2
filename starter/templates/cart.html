@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/main.css">
-    <title>Cupcake Order</title>
+    <title>Cupcake Cart</title>
 </head>
 <body>
     <header>
@@ -26,6 +26,9 @@
             <th>
                 <h5>Quantity</h5>
             </th>
+            <th>
+                <h5>Delete Cupcake</h5>
+            </th>
             {% for cupcake in cupcakes %}
             <tr>
                 <td>
@@ -36,6 +39,10 @@
                 </td>
                 <td>
                     <h6>Qty: {{ cupcake[2] }}</h6>
+                </td>
+                <td>
+                    <a href="{{ url_for('delete', name=cupcake[0]) }}">
+                        <button class="delete-btn">Delete</button>
                 </td>
             </tr>
             {% endfor %}

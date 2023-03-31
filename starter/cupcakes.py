@@ -124,10 +124,27 @@ def add_cupcake_dictionary(file, cupcake):
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writerow(cupcake)
         
+def del_cupcake_dictionary(file, name):
+    del_cupcake=find_cupcake(file, name) #creates dictionary
+    del_list = get_cupcakes(file) #creates list
+    
+    del_list.remove(del_cupcake) #removes dictionary from list
+    
+    with open(file, "w", newline="\n") as csvfile: #write a new file
+        fieldnames = ["size", "name", "price", "flavor", "frosting", "sprinkles", "filling"]
+        writer = csv.DictWriter(csvfile, fieldnames = fieldnames)
+        
+        writer.writeheader()
+        
+        for cupcake in del_list: #writes each dict from the list to a row
+            writer.writerow({"size": cupcake['size'], "name": cupcake['name'], "price": cupcake['price'], "flavor": cupcake['flavor'], "frosting": cupcake['frosting'], "sprinkles": cupcake['sprinkles'], "filling": cupcake['filling']})        
+            
+        
 def read_csv(file):
     with open(file) as csvfile:
         reader = csv.DictReader(csvfile)
         
         for row in reader:
             pprint(row)
-# read_csv("sample.csv")
+
+

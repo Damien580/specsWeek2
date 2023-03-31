@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#home_header{
+    display: flex;
+    height: 10vh;
+    /* background-color: aqua; */
+    position:relative;
+    justify-content: center;
+    align-content: center;
+    background-image: linear-gradient(45deg, rgb(250, 25, 201), rgb(196, 238, 57))
+    
+}
+#title{
+    font-size: 35px;
+}
+#cart{
+    display: flex;
+    position: relative;
+    top: 65%;
+    right: 0%;
+    
+}
+#total{
+    margin-left: 10px;
+}
